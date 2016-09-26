@@ -8,7 +8,7 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="rhs_pkt_kontrol20160924142208748" name="rhs_pkt_kontrol">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Checked" name="Słowniki">
+    <layer-tree-group expanded="0" checked="Qt::Checked" name="Słowniki">
       <customproperties/>
       <layer-tree-layer expanded="1" checked="Qt::Checked" id="uzy_ter20160924142224840" name="uzy_ter">
         <customproperties/>
@@ -46,10 +46,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>232297.16953666682820767</xmin>
-      <ymin>426489.99252827482996508</ymin>
-      <xmax>233066.17524502042215317</xmax>
-      <ymax>427179.5031963104265742</ymax>
+      <xmin>232277.06481226542382501</xmin>
+      <ymin>426472.40089442359749228</ymin>
+      <xmax>233046.07052061901777051</xmax>
+      <ymax>427161.91156245919410139</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -93,7 +93,7 @@
         <legendlayerfile isInOverview="0" layerid="rhs_pkt_kontrol20160924142208748" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Checked" name="Słowniki">
+    <legendgroup open="false" checked="Qt::Checked" name="Słowniki">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="uzy_ter" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="uzy_ter20160924142224840" visible="1"/>
@@ -670,7 +670,7 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="UTF-8">ogr</provider>
+      <provider encoding="windows-1250">ogr</provider>
       <previewExpression>COALESCE( "NAME", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
@@ -679,11 +679,11 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
-        <edittype widgetv2type="TextEdit" name="NAME">
+        <edittype widgetv2type="TextEdit" name="PKT">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="1" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="Hidden" name="DESCRIPTIO">
-          <widgetv2config fieldEditable="1" constraint="" labelOnTop="1" constraintDescription="" notNull="0"/>
+        <edittype widgetv2type="TextEdit" name="OPIS">
+          <widgetv2config IsMultiline="1" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="1" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="ValueRelation" name="BL_MAT">
           <widgetv2config OrderByValue="1" AllowNull="0" FilterExpression=" &quot;AKRO&quot; || ' - ' || &quot;OPIS&quot; " UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="&quot;BL_MAT&quot;" Layer="mat_brz20160924142224781" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
@@ -733,14 +733,14 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="ValueRelation" name="BP_U5M">
           <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="" Layer="uzy_ter20160924142224840" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="ValueRelation" name="TPY_RSL">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="OPIS" constraint="" Layer="tpy_rsl_kor20160924142224828" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="1" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="CREATED">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="1" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="COORD">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="'E: ' ||left(&quot;COORD&quot;,7) ||  '\n' || 'N: ' || substr( &quot;COORD&quot; , 18,7)" UseHtml="0" labelOnTop="1" constraintDescription="opis" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="ValueRelation" name="TPY_RSL">
-          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="OPIS" constraint="" Layer="tpy_rsl_kor20160924142224828" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="1" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="MODIF">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
@@ -839,7 +839,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -1004,26 +1004,24 @@ def my_form_open(dialog, layer, feature):
         <alias field="BP_STR_ST" index="15" name="Stok prawego brzegu (struktura)"/>
         <alias field="BP_STR_SZ" index="16" name="Szczyt prawego brzegu (struktura w odległości 1 m)"/>
         <alias field="BP_U5M" index="17" name="Użytkowanie terenu w pasie 5 m od szczytu prawego brzegu"/>
-        <alias field="COORD" index="19" name="Współrzędne"/>
-        <alias field="CREATED" index="18" name="Utworzono"/>
-        <alias field="DESCRIPTIO" index="1" name="Opis"/>
+        <alias field="COORD" index="20" name="Współrzędne"/>
+        <alias field="CREATED" index="19" name="Utworzono"/>
         <alias field="KO_MAT" index="5" name="Materiał dna koryta"/>
         <alias field="KO_MOD" index="7" name="Modyfikacje dna koryta"/>
         <alias field="KO_NAT" index="8" name="Naturalne elementy morfologiczne dna"/>
         <alias field="KO_PRZ" index="6" name="Typ przepływu"/>
         <alias field="MODIF" index="21" name="Zmodyfikowano"/>
-        <alias field="NAME" index="0" name="Nazwa punktu"/>
-        <alias field="TPY_RSL" index="20" name="Typy roślinności w korycie"/>
+        <alias field="OPIS" index="1" name="Opis punktu"/>
+        <alias field="PKT" index="0" name="Nazwa/numer punktu kontrolnego"/>
+        <alias field="TPY_RSL" index="18" name="Typy roślinności w korycie"/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-400097344">
         <columns>
-          <column width="-1" hidden="0" type="field" name="NAME"/>
-          <column width="-1" hidden="0" type="field" name="DESCRIPTIO"/>
           <column width="-1" hidden="0" type="field" name="BL_MAT"/>
-          <column width="-1" hidden="0" type="field" name="BL_MOD"/>
+          <column width="164" hidden="0" type="field" name="BL_MOD"/>
           <column width="-1" hidden="0" type="field" name="BL_NAT"/>
           <column width="-1" hidden="0" type="field" name="KO_MAT"/>
           <column width="-1" hidden="0" type="field" name="KO_PRZ"/>
@@ -1043,6 +1041,8 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
           <column width="-1" hidden="0" type="field" name="TPY_RSL"/>
           <column width="245" hidden="0" type="field" name="MODIF"/>
+          <column width="-1" hidden="0" type="field" name="PKT"/>
+          <column width="267" hidden="0" type="field" name="OPIS"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -1069,10 +1069,11 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>tablayout</editorlayout>
       <attributeEditorForm>
-        <attributeEditorContainer name="Punkt kontrolny" groupBox="0" columnCount="3">
-          <attributeEditorField index="0" name="NAME"/>
-          <attributeEditorField index="18" name="CREATED"/>
-          <attributeEditorField index="19" name="COORD"/>
+        <attributeEditorContainer name="Punkt kontrolny" groupBox="0" columnCount="2">
+          <attributeEditorField index="0" name="PKT"/>
+          <attributeEditorField index="1" name="OPIS"/>
+          <attributeEditorField index="19" name="CREATED"/>
+          <attributeEditorField index="20" name="COORD"/>
         </attributeEditorContainer>
         <attributeEditorContainer name="Brzeg lewy" groupBox="0" columnCount="3">
           <attributeEditorField index="2" name="BL_MAT"/>
@@ -1103,7 +1104,7 @@ def my_form_open(dialog, layer, feature):
           </attributeEditorContainer>
         </attributeEditorContainer>
         <attributeEditorContainer name="Typy roślinności w korycie" groupBox="0" columnCount="1">
-          <attributeEditorField index="20" name="TPY_RSL"/>
+          <attributeEditorField index="18" name="TPY_RSL"/>
         </attributeEditorContainer>
       </attributeEditorForm>
       <widgets/>
