@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.16.2">
+<qgis projectname="" version="2.18.0">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -46,10 +46,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>232277.06481226542382501</xmin>
-      <ymin>426472.40089442359749228</ymin>
-      <xmax>233046.07052061901777051</xmax>
-      <ymax>427161.91156245919410139</ymax>
+      <xmin>232286.09411863257992081</xmin>
+      <ymin>426494.56373732473002747</ymin>
+      <xmax>233055.09982698617386632</xmax>
+      <ymax>427184.07440536032663658</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -176,6 +176,11 @@
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -191,6 +196,11 @@
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -259,6 +269,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -274,6 +289,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -342,6 +362,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -357,6 +382,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -425,6 +455,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -440,6 +475,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -508,6 +548,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -523,6 +568,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -591,6 +641,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -606,6 +661,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -675,6 +735,30 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="PKT" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="BL_MAT" expression=""/>
+        <default field="BL_MOD" expression=""/>
+        <default field="BL_NAT" expression=""/>
+        <default field="KO_MAT" expression=""/>
+        <default field="KO_PRZ" expression=""/>
+        <default field="KO_MOD" expression=""/>
+        <default field="KO_NAT" expression=""/>
+        <default field="BP_MAT" expression=""/>
+        <default field="BP_MOD" expression=""/>
+        <default field="BP_NAT" expression=""/>
+        <default field="BL_U5M" expression=""/>
+        <default field="BL_STR_SZ" expression=""/>
+        <default field="BL_STR_ST" expression=""/>
+        <default field="BP_STR_ST" expression=""/>
+        <default field="BP_STR_SZ" expression=""/>
+        <default field="BP_U5M" expression=""/>
+        <default field="TPY_RSL" expression=""/>
+        <default field="CREATED" expression=""/>
+        <default field="COORD" expression=""/>
+        <default field="MODIF" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -992,28 +1076,28 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
+        <alias field="PKT" index="0" name="Nazwa/numer punktu kontrolnego"/>
+        <alias field="OPIS" index="1" name="Opis punktu"/>
         <alias field="BL_MAT" index="2" name="Materiał brzegu lewego"/>
         <alias field="BL_MOD" index="3" name="Modyfikacje brzegu lewego"/>
         <alias field="BL_NAT" index="4" name="Naturalne elementy morfologiczne brzegu lewego"/>
-        <alias field="BL_STR_ST" index="14" name="Stok lewego brzegu (struktura)"/>
-        <alias field="BL_STR_SZ" index="13" name="Szczyt lewego brzegu (struktura w odległości 1 m)"/>
-        <alias field="BL_U5M" index="12" name="Użytkowanie terenu w pasie 5 m od szczytu lewego brzegu"/>
+        <alias field="KO_MAT" index="5" name="Materiał dna koryta"/>
+        <alias field="KO_PRZ" index="6" name="Typ przepływu"/>
+        <alias field="KO_MOD" index="7" name="Modyfikacje dna koryta"/>
+        <alias field="KO_NAT" index="8" name="Naturalne elementy morfologiczne dna"/>
         <alias field="BP_MAT" index="9" name="Materiał brzegu prawego"/>
         <alias field="BP_MOD" index="10" name="Modyfikacje brzegu prawego"/>
         <alias field="BP_NAT" index="11" name="Naturalne elementy morfologiczne brzegu prawego"/>
+        <alias field="BL_U5M" index="12" name="Użytkowanie terenu w pasie 5 m od szczytu lewego brzegu"/>
+        <alias field="BL_STR_SZ" index="13" name="Szczyt lewego brzegu (struktura w odległości 1 m)"/>
+        <alias field="BL_STR_ST" index="14" name="Stok lewego brzegu (struktura)"/>
         <alias field="BP_STR_ST" index="15" name="Stok prawego brzegu (struktura)"/>
         <alias field="BP_STR_SZ" index="16" name="Szczyt prawego brzegu (struktura w odległości 1 m)"/>
         <alias field="BP_U5M" index="17" name="Użytkowanie terenu w pasie 5 m od szczytu prawego brzegu"/>
-        <alias field="COORD" index="20" name="Współrzędne"/>
-        <alias field="CREATED" index="19" name="Utworzono"/>
-        <alias field="KO_MAT" index="5" name="Materiał dna koryta"/>
-        <alias field="KO_MOD" index="7" name="Modyfikacje dna koryta"/>
-        <alias field="KO_NAT" index="8" name="Naturalne elementy morfologiczne dna"/>
-        <alias field="KO_PRZ" index="6" name="Typ przepływu"/>
-        <alias field="MODIF" index="21" name="Zmodyfikowano"/>
-        <alias field="OPIS" index="1" name="Opis punktu"/>
-        <alias field="PKT" index="0" name="Nazwa/numer punktu kontrolnego"/>
         <alias field="TPY_RSL" index="18" name="Typy roślinności w korycie"/>
+        <alias field="CREATED" index="19" name="Utworzono"/>
+        <alias field="COORD" index="20" name="Współrzędne"/>
+        <alias field="MODIF" index="21" name="Zmodyfikowano"/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -1069,42 +1153,42 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>tablayout</editorlayout>
       <attributeEditorForm>
-        <attributeEditorContainer name="Punkt kontrolny" groupBox="0" columnCount="2">
-          <attributeEditorField index="0" name="PKT"/>
-          <attributeEditorField index="1" name="OPIS"/>
-          <attributeEditorField index="19" name="CREATED"/>
-          <attributeEditorField index="20" name="COORD"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Punkt kontrolny" groupBox="0" columnCount="2">
+          <attributeEditorField showLabel="1" index="0" name="PKT"/>
+          <attributeEditorField showLabel="1" index="1" name="OPIS"/>
+          <attributeEditorField showLabel="1" index="19" name="CREATED"/>
+          <attributeEditorField showLabel="1" index="20" name="COORD"/>
         </attributeEditorContainer>
-        <attributeEditorContainer name="Brzeg lewy" groupBox="0" columnCount="3">
-          <attributeEditorField index="2" name="BL_MAT"/>
-          <attributeEditorField index="3" name="BL_MOD"/>
-          <attributeEditorField index="4" name="BL_NAT"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Brzeg lewy" groupBox="0" columnCount="3">
+          <attributeEditorField showLabel="1" index="2" name="BL_MAT"/>
+          <attributeEditorField showLabel="1" index="3" name="BL_MOD"/>
+          <attributeEditorField showLabel="1" index="4" name="BL_NAT"/>
         </attributeEditorContainer>
-        <attributeEditorContainer name="Koryto" groupBox="0" columnCount="4">
-          <attributeEditorField index="5" name="KO_MAT"/>
-          <attributeEditorField index="6" name="KO_PRZ"/>
-          <attributeEditorField index="7" name="KO_MOD"/>
-          <attributeEditorField index="8" name="KO_NAT"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Koryto" groupBox="0" columnCount="4">
+          <attributeEditorField showLabel="1" index="5" name="KO_MAT"/>
+          <attributeEditorField showLabel="1" index="6" name="KO_PRZ"/>
+          <attributeEditorField showLabel="1" index="7" name="KO_MOD"/>
+          <attributeEditorField showLabel="1" index="8" name="KO_NAT"/>
         </attributeEditorContainer>
-        <attributeEditorContainer name="Brzeg prawy" groupBox="0" columnCount="3">
-          <attributeEditorField index="9" name="BP_MAT"/>
-          <attributeEditorField index="10" name="BP_MOD"/>
-          <attributeEditorField index="11" name="BP_NAT"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Brzeg prawy" groupBox="0" columnCount="3">
+          <attributeEditorField showLabel="1" index="9" name="BP_MAT"/>
+          <attributeEditorField showLabel="1" index="10" name="BP_MOD"/>
+          <attributeEditorField showLabel="1" index="11" name="BP_NAT"/>
         </attributeEditorContainer>
-        <attributeEditorContainer name="Użytkowanie i struktura brzegów" groupBox="0" columnCount="1">
-          <attributeEditorContainer name="Użytkowanie terenu - brzeg lewy" groupBox="1" columnCount="3">
-            <attributeEditorField index="12" name="BL_U5M"/>
-            <attributeEditorField index="13" name="BL_STR_SZ"/>
-            <attributeEditorField index="14" name="BL_STR_ST"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Użytkowanie i struktura brzegów" groupBox="0" columnCount="1">
+          <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Użytkowanie terenu - brzeg lewy" groupBox="1" columnCount="3">
+            <attributeEditorField showLabel="1" index="12" name="BL_U5M"/>
+            <attributeEditorField showLabel="1" index="13" name="BL_STR_SZ"/>
+            <attributeEditorField showLabel="1" index="14" name="BL_STR_ST"/>
           </attributeEditorContainer>
-          <attributeEditorContainer name="Użytkowanie terenu - brzeg prawy" groupBox="1" columnCount="3">
-            <attributeEditorField index="15" name="BP_STR_ST"/>
-            <attributeEditorField index="16" name="BP_STR_SZ"/>
-            <attributeEditorField index="17" name="BP_U5M"/>
+          <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Użytkowanie terenu - brzeg prawy" groupBox="1" columnCount="3">
+            <attributeEditorField showLabel="1" index="15" name="BP_STR_ST"/>
+            <attributeEditorField showLabel="1" index="16" name="BP_STR_SZ"/>
+            <attributeEditorField showLabel="1" index="17" name="BP_U5M"/>
           </attributeEditorContainer>
         </attributeEditorContainer>
-        <attributeEditorContainer name="Typy roślinności w korycie" groupBox="0" columnCount="1">
-          <attributeEditorField index="18" name="TPY_RSL"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Typy roślinności w korycie" groupBox="0" columnCount="1">
+          <attributeEditorField showLabel="1" index="18" name="TPY_RSL"/>
         </attributeEditorContainer>
       </attributeEditorForm>
       <widgets/>
@@ -1142,6 +1226,12 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="INFO" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1160,6 +1250,12 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="INFO" index="2" name=""/>
+        <alias field="LEGEND" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -1229,6 +1325,9 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="OPIS" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1238,6 +1337,9 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="OPIS" index="0" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -1305,6 +1407,12 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="INFO" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1323,6 +1431,12 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="INFO" index="2" name=""/>
+        <alias field="LEGEND" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
@@ -1392,6 +1506,11 @@ def my_form_open(dialog, layer, feature):
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
+      <defaults>
+        <default field="AKRO" expression=""/>
+        <default field="OPIS" expression=""/>
+        <default field="LEGEND" expression=""/>
+      </defaults>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
@@ -1407,6 +1526,11 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <annotationform>.</annotationform>
+      <aliases>
+        <alias field="AKRO" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+        <alias field="LEGEND" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
