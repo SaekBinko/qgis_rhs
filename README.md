@@ -1,7 +1,7 @@
 # QGIS RHS
 Repozytorium formularzy i tabel dla metody River Habitat Survey, gotowe do wykorzystania w programie QGIS. Dzięki takiemu rozwiązaniu formularz można wykorzystać do pracy w terenie używając aplikacji QField na Androida.
 
-Tabele mają zawarte informacje w języku polskim.
+Tabele zawierają informacje w języku polskim.
 
 Do pracy przyda się jest wtyczka "Auto Fields", która automatycznie uzupełnia pola z informacją o stworzeniu i modyfikacji punktów kontrolnych.
 
