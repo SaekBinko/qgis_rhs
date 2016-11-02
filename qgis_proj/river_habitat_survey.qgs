@@ -8,12 +8,15 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="rhs_pkt_kontrol20160924142208748" name="rhs_pkt_kontrol">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="0" checked="Qt::Checked" name="Słowniki">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="Słowniki">
       <customproperties/>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="uzy_ter20160924142224840" name="uzy_ter">
+      <layer-tree-layer expanded="1" checked="Qt::Checked" id="rhs_pkt_typy_rosl_wkor20161102142844830" name="rhs_pkt_typy_rosl_wkor">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" checked="Qt::Checked" id="typ_prz20160924142224834" name="typ_prz">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" checked="Qt::Checked" id="uzy_ter20160924142224840" name="uzy_ter">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" checked="Qt::Checked" id="tpy_rsl_kor20160924142224828" name="tpy_rsl_kor">
@@ -46,10 +49,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>232286.09411863257992081</xmin>
-      <ymin>426494.56373732473002747</ymin>
-      <xmax>233055.09982698617386632</xmax>
-      <ymax>427184.07440536032663658</ymax>
+      <xmin>232282.81073449901305139</xmin>
+      <ymin>426460.49862693954491988</ymin>
+      <xmax>233051.81644285260699689</xmax>
+      <ymax>427150.00929497514152899</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -68,6 +71,7 @@
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:2180" srcAuthId="EPSG:2180" srcDatumTransform="-1" destDatumTransform="-1" layerid="rhs_pkt_kontrol20160924133222891"/>
+      <layer_coordinate_transform destAuthId="EPSG:2180" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="rhs_pkt_typy_rosl_wkor20161102142844830"/>
       <layer_coordinate_transform destAuthId="EPSG:2180" srcAuthId="EPSG:2180" srcDatumTransform="-1" destDatumTransform="-1" layerid="rhs_pkt_kontrol20160924142208748"/>
       <layer_coordinate_transform destAuthId="EPSG:2180" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="rhs_pkt_kontrolne20160924132821458"/>
     </layer_coordinate_transform_info>
@@ -85,6 +89,7 @@
       <item>tpy_rsl_kor20160924142224828</item>
       <item>typ_prz20160924142224834</item>
       <item>uzy_ter20160924142224840</item>
+      <item>rhs_pkt_typy_rosl_wkor20161102142844830</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -93,15 +98,20 @@
         <legendlayerfile isInOverview="0" layerid="rhs_pkt_kontrol20160924142208748" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="false" checked="Qt::Checked" name="Słowniki">
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="uzy_ter" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::Checked" name="Słowniki">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="rhs_pkt_typy_rosl_wkor" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="uzy_ter20160924142224840" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="rhs_pkt_typy_rosl_wkor20161102142844830" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="typ_prz" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="typ_prz20160924142224834" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="uzy_ter" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="uzy_ter20160924142224840" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="tpy_rsl_kor" showFeatureCount="0">
@@ -754,7 +764,18 @@ def my_form_open(dialog, layer, feature):
         <default field="BP_STR_ST" expression=""/>
         <default field="BP_STR_SZ" expression=""/>
         <default field="BP_U5M" expression=""/>
-        <default field="TPY_RSL" expression=""/>
+        <default field="TRK_BR" expression="0"/>
+        <default field="TRK_NW" expression="0"/>
+        <default field="TRK_WA" expression="0"/>
+        <default field="TRK_WS" expression="0"/>
+        <default field="TRK_WW" expression="0"/>
+        <default field="TRK_ZLP" expression="0"/>
+        <default field="TRK_SP" expression="0"/>
+        <default field="TRK_ZKB" expression="0"/>
+        <default field="TRK_ZS" expression="0"/>
+        <default field="TRK_ZW" expression="0"/>
+        <default field="TRK_ZP" expression="0"/>
+        <default field="TRK_GS" expression="0"/>
         <default field="CREATED" expression=""/>
         <default field="COORD" expression=""/>
         <default field="MODIF" expression=""/>
@@ -770,7 +791,7 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="1" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="1" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="ValueRelation" name="BL_MAT">
-          <widgetv2config OrderByValue="1" AllowNull="0" FilterExpression=" &quot;AKRO&quot; || ' - ' || &quot;OPIS&quot; " UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="&quot;BL_MAT&quot;" Layer="mat_brz20160924142224781" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+          <widgetv2config OrderByValue="0" AllowNull="1" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="&quot;BL_MAT&quot;" Layer="mat_brz20160924142224781" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
         </edittype>
         <edittype widgetv2type="ValueRelation" name="BL_MOD">
           <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="" Layer="mod_brz20160924142224797" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="1" notNull="0"/>
@@ -817,8 +838,41 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="ValueRelation" name="BP_U5M">
           <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="AKRO" constraint="" Layer="uzy_ter20160924142224840" Value="LEGEND" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="ValueRelation" name="TPY_RSL">
-          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="OPIS" constraint="" Layer="tpy_rsl_kor20160924142224828" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="1" notNull="0"/>
+        <edittype widgetv2type="ValueRelation" name="TRK_BR">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_NW">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_WA">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_WS">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_WW">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_ZLP">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_SP">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_ZKB">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_ZS">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_ZW">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_ZP">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="ValueRelation" name="TRK_GS">
+          <widgetv2config OrderByValue="0" AllowNull="0" FilterExpression="" UseCompleter="0" fieldEditable="1" Key="KOD" constraint="" Layer="rhs_pkt_typy_rosl_wkor20161102142844830" Value="OPIS" labelOnTop="1" constraintDescription="" AllowMulti="0" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="CREATED">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="1" constraintDescription="" notNull="0"/>
@@ -1007,12 +1061,14 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/shapeSizeY" value="0"/>
         <property key="labeling/shapeTransparency" value="0"/>
         <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
         <property key="labeling/textColorA" value="255"/>
         <property key="labeling/textColorB" value="0"/>
         <property key="labeling/textColorG" value="0"/>
         <property key="labeling/textColorR" value="0"/>
         <property key="labeling/textTransp" value="0"/>
         <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/useSubstitutions" value="false"/>
         <property key="labeling/wrapChar" value=""/>
         <property key="labeling/xOffset" value="0"/>
         <property key="labeling/yOffset" value="0"/>
@@ -1094,10 +1150,21 @@ def my_form_open(dialog, layer, feature):
         <alias field="BP_STR_ST" index="15" name="Stok prawego brzegu (struktura)"/>
         <alias field="BP_STR_SZ" index="16" name="Szczyt prawego brzegu (struktura w odległości 1 m)"/>
         <alias field="BP_U5M" index="17" name="Użytkowanie terenu w pasie 5 m od szczytu prawego brzegu"/>
-        <alias field="TPY_RSL" index="18" name="Typy roślinności w korycie"/>
-        <alias field="CREATED" index="19" name="Utworzono"/>
-        <alias field="COORD" index="20" name="Współrzędne"/>
-        <alias field="MODIF" index="21" name="Zmodyfikowano"/>
+        <alias field="TRK_BR" index="18" name="Brak"/>
+        <alias field="TRK_NW" index="19" name="Niewidoczne"/>
+        <alias field="TRK_WA" index="20" name="Wątrobowce/mchy"/>
+        <alias field="TRK_WS" index="21" name="Wynurzone szerokolistne"/>
+        <alias field="TRK_WW" index="22" name="Wynurzone wąskolistne"/>
+        <alias field="TRK_ZLP" index="23" name="Zanurzone o liściach pływających"/>
+        <alias field="TRK_SP" index="24" name="Swobodnie pływające"/>
+        <alias field="TRK_ZKB" index="25" name="Zakorzenione na brzegu z pędami płożącymi się na wodzie"/>
+        <alias field="TRK_ZS" index="26" name="Zanurzone szerokolistne"/>
+        <alias field="TRK_ZW" index="27" name="Zanurzone wąskolistne"/>
+        <alias field="TRK_ZP" index="28" name="Zanurzone o liściach silnie podzielonych"/>
+        <alias field="TRK_GS" index="29" name="Glony strukturalne"/>
+        <alias field="CREATED" index="30" name="Utworzono"/>
+        <alias field="COORD" index="31" name="Współrzędne"/>
+        <alias field="MODIF" index="32" name="Zmodyfikowano"/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -1123,10 +1190,22 @@ def my_form_open(dialog, layer, feature):
           <column width="154" hidden="0" type="field" name="CREATED"/>
           <column width="175" hidden="0" type="field" name="COORD"/>
           <column width="-1" hidden="1" type="actions"/>
-          <column width="-1" hidden="0" type="field" name="TPY_RSL"/>
+          <column width="197" hidden="0" type="field" name="TPY_RSL"/>
           <column width="245" hidden="0" type="field" name="MODIF"/>
           <column width="-1" hidden="0" type="field" name="PKT"/>
           <column width="267" hidden="0" type="field" name="OPIS"/>
+          <column width="-1" hidden="0" type="field" name="TRK_BR"/>
+          <column width="-1" hidden="0" type="field" name="TRK_NW"/>
+          <column width="-1" hidden="0" type="field" name="TRK_WA"/>
+          <column width="-1" hidden="0" type="field" name="TRK_WS"/>
+          <column width="-1" hidden="0" type="field" name="TRK_WW"/>
+          <column width="-1" hidden="0" type="field" name="TRK_ZLP"/>
+          <column width="-1" hidden="0" type="field" name="TRK_SP"/>
+          <column width="-1" hidden="0" type="field" name="TRK_ZKB"/>
+          <column width="-1" hidden="0" type="field" name="TRK_ZS"/>
+          <column width="-1" hidden="0" type="field" name="TRK_ZW"/>
+          <column width="-1" hidden="0" type="field" name="TRK_ZP"/>
+          <column width="-1" hidden="0" type="field" name="TRK_GS"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -1153,11 +1232,11 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>tablayout</editorlayout>
       <attributeEditorForm>
-        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Punkt kontrolny" groupBox="0" columnCount="2">
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Punkt kontrolny" groupBox="1" columnCount="2">
           <attributeEditorField showLabel="1" index="0" name="PKT"/>
           <attributeEditorField showLabel="1" index="1" name="OPIS"/>
-          <attributeEditorField showLabel="1" index="19" name="CREATED"/>
-          <attributeEditorField showLabel="1" index="20" name="COORD"/>
+          <attributeEditorField showLabel="1" index="31" name="CREATED"/>
+          <attributeEditorField showLabel="1" index="32" name="COORD"/>
         </attributeEditorContainer>
         <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Brzeg lewy" groupBox="0" columnCount="3">
           <attributeEditorField showLabel="1" index="2" name="BL_MAT"/>
@@ -1188,9 +1267,110 @@ def my_form_open(dialog, layer, feature):
           </attributeEditorContainer>
         </attributeEditorContainer>
         <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Typy roślinności w korycie" groupBox="0" columnCount="1">
-          <attributeEditorField showLabel="1" index="18" name="TPY_RSL"/>
+          <attributeEditorField showLabel="1" index="19" name="TRK_BR"/>
+          <attributeEditorField showLabel="1" index="20" name="TRK_NW"/>
+          <attributeEditorField showLabel="1" index="21" name="TRK_WA"/>
+          <attributeEditorField showLabel="1" index="22" name="TRK_WS"/>
+          <attributeEditorField showLabel="1" index="23" name="TRK_WW"/>
+          <attributeEditorField showLabel="1" index="24" name="TRK_ZLP"/>
+          <attributeEditorField showLabel="1" index="25" name="TRK_SP"/>
+          <attributeEditorField showLabel="1" index="26" name="TRK_ZKB"/>
+          <attributeEditorField showLabel="1" index="27" name="TRK_ZS"/>
+          <attributeEditorField showLabel="1" index="28" name="TRK_ZW"/>
+          <attributeEditorField showLabel="1" index="29" name="TRK_ZP"/>
+          <attributeEditorField showLabel="1" index="30" name="TRK_GS"/>
         </attributeEditorContainer>
       </attributeEditorForm>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" readOnly="0" geometry="No geometry" type="vector" hasScaleBasedVisibilityFlag="0">
+      <id>rhs_pkt_typy_rosl_wkor20161102142844830</id>
+      <datasource>./rhs_pkt_typy_rosl_wkor.dbf</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>rhs_pkt_typy_rosl_wkor</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames" value="_fields_"/>
+        <property key="variableValues" value=""/>
+      </customproperties>
+      <provider encoding="windows-1250">ogr</provider>
+      <previewExpression>COALESCE("OPIS", '&lt;NULL>')||', '||COALESCE("N30PROC", '&lt;NULL>')||', '||COALESCE("OBECNE", '&lt;NULL>')||', '||COALESCE("BRAK", '&lt;NULL>')</previewExpression>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <defaults>
+        <default field="KOD" expression=""/>
+        <default field="OPIS" expression=""/>
+      </defaults>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="KOD">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OPIS">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="KOD" index="0" name=""/>
+        <alias field="OPIS" index="1" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="575099728">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="OPIS"/>
+          <column width="-1" hidden="0" type="field" name="N30PROC"/>
+          <column width="-1" hidden="0" type="field" name="OBECNE"/>
+          <column width="-1" hidden="0" type="field" name="BRAK"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
       <widgets/>
       <conditionalstyles>
         <rowstyles/>
